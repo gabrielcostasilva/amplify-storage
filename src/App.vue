@@ -1,14 +1,21 @@
 <template>
-  <amplify-auth-container>
-    <amplify-authenticator>
-      <main>
-        <!-- <amplify-sign-out></amplify-sign-out> -->
-        <router-view></router-view>
-      </main>
-    </amplify-authenticator>
-  </amplify-auth-container>
+  <the-header></the-header>
+
+  <main>
+    <router-view></router-view>
+  </main>
+
+  <the-footer></the-footer>
 </template>
 
 <script>
-export default {}
+import TheHeader from './components/TheHeader.vue'
+import TheFooter from './components/TheFooter.vue'
+
+export default {
+  components: {
+    TheHeader,
+    TheFooter,
+  },
+}
 </script>
